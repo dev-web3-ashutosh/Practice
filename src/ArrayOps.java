@@ -107,8 +107,8 @@ public class ArrayOps {
 	//search array method
 	void search(int ele) {
 		boolean flag = false;
-		for(int i : arr) {
-			if(i == ele) {
+		for(int i=0; i<size; i++) {
+			if(arr[i] == ele) {
 				System.out.println("Element " + ele + " found at index " + i);
 				flag=true;
 				break;
@@ -136,7 +136,7 @@ public class ArrayOps {
 	
 	//print array
 	void print() {
-		System.out.println(Arrays.toString(arr));
+		System.out.println(Arrays.toString(arr) + "\n");
 	}
 
 	public static void main(String[] args) {
