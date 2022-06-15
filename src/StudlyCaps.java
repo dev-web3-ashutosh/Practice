@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class StudlyCaps {
 
@@ -5,6 +6,8 @@ public class StudlyCaps {
 		
 		String input, output = "";
 		int ascii;
+		
+		Scanner sc = new Scanner(System.in);
 		
 		
 
