@@ -91,7 +91,9 @@ public class ArrayOps {
 		int[] temp = arr;
 		arr = new int[capacity*2];
 		capacity *= 2;
-		arr = temp;
+		for(int i=0; i<size; i++) {
+			arr[i] = temp[i];
+		}
 	}
 	
 	
