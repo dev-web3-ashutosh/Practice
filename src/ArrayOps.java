@@ -50,9 +50,16 @@ public class ArrayOps {
 		}
 	}
 	
+	//delete from end
+	void delete() {
+		int temp = arr[size];
+		arr[size] = 0;
+		System.out.println("Element " + temp + " deleted from index " + size);
+		System.out.println("New Array: " + print()); //print method
+		size--;
+	}
+
 	
-
-
 
 	public static void main(String[] args) {
 		
