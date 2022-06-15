@@ -9,6 +9,11 @@
  * print
  */
 public class ArrayOps {
+	
+	int[] arr;
+	int size, capacity;
+	
+	
 
 	public static void main(String[] args) {
 		
