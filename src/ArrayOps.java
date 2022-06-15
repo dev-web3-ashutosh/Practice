@@ -96,6 +96,21 @@ public class ArrayOps {
 		}
 	}
 	
+	//search array method
+	void search(int ele) {
+		boolean flag = false;
+		for(int i : arr) {
+			if(i == ele) {
+				System.out.println("Element " + ele + " found at index " + i);
+				flag=true;
+				break;
+			}
+		}
+		if(flag == false) {
+			System.out.println("Element not found");
+		}
+	}
+	
 	
 
 	public static void main(String[] args) {
