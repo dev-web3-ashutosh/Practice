@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
  * insert at end
  * insert at index
@@ -126,7 +128,10 @@ public class ArrayOps {
 		System.out.println("Sorted Array: " + print()); //print method
 	}
 	
-	
+	//print array
+	void print() {
+		System.out.println(Arrays.toString(arr));
+	}
 
 	public static void main(String[] args) {
 		
