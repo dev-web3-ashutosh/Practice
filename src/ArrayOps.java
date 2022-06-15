@@ -80,8 +80,8 @@ public class ArrayOps {
 			int temp = arr[index];
 			
 			//left shift operation
-			for(int i=index; i<size; i++) {
-				arr[i] = arr[i+1];
+			for(int i=index+1; i<size; i++) {
+				arr[i-1] = arr[i];
 			}
 			
 			arr[size-1] = 0;
@@ -121,7 +121,7 @@ public class ArrayOps {
 	
 	//array sort method
 	void sort() {
-		for(int i=0; i<size-1; i++) {
+		for(int i=0; i<size; i++) {
 			for(int j=0; j<size-1-i; j++) {
 				if(arr[j] > arr[j+1]) {
 					int temp = arr[j];
@@ -155,7 +155,7 @@ public class ArrayOps {
 		ob.delete();
 		
 		ob.deleteFromIndex(5);
-		ob.deleteFromIndex(0);
+		ob.deleteFromIndex(2);
 		
 		ob.search(22);
 		ob.search(666);
