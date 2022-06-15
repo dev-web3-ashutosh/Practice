@@ -84,9 +84,17 @@ public class ArrayOps {
 			System.out.println("New Array: " + print()); //print method
 			size--;
 		}
-		
-		
 	}
+	
+	//grow array method
+	void grow() {
+		int[] temp = arr;
+		arr = new int[capacity*2];
+		capacity *= 2;
+		arr = temp;
+	}
+	
+	
 
 	public static void main(String[] args) {
 		
