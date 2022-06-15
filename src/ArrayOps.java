@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
  * insert at end
  * insert at index
@@ -27,7 +29,8 @@ public class ArrayOps {
 		
 		arr[size] = ele;
 		System.out.println("Element " + ele + " inserted at index " + size);
-		System.out.println("New Array: " + arr);
+		System.out.println("New Array: ");
+		print();
 		size++;
 	}
 	
@@ -45,7 +48,8 @@ public class ArrayOps {
 			
 			arr[index] = ele;
 			System.out.println("Element " + ele + " inserted at index " + index);
-			System.out.println("New Array: " + arr);
+			System.out.println("New Array: ");
+			print();
 			size++;
 		}
 	}
@@ -60,7 +64,8 @@ public class ArrayOps {
 			int temp = arr[size-1];
 			arr[size-1] = 0;
 			System.out.println("Element " + temp + " deleted from index " + (size-1));
-			System.out.println("New Array: " + arr);
+			System.out.println("New Array: ");
+			print();
 			size--;
 		}
 	}
@@ -81,7 +86,8 @@ public class ArrayOps {
 			
 			arr[size-1] = 0;
 			System.out.println("Element " + temp + " deleted from index " + index);
-			System.out.println("New Array: " + arr);
+			System.out.println("New Array: ");
+			print();
 			size--;
 		}
 	}
@@ -94,7 +100,8 @@ public class ArrayOps {
 		for(int i=0; i<size; i++) {
 			arr[i] = temp[i];
 		}
-		System.out.println("New Array: " + arr);
+		System.out.println("New Array: ");
+		print();
 	}
 	
 	//search array method
@@ -123,12 +130,13 @@ public class ArrayOps {
 				}
 			}
 		}
-		System.out.println("Sorted Array: " + arr);
+		System.out.println("Sorted Array: ");
+		print();
 	}
 	
 	//print array
 	void print() {
-		System.out.println(arr);
+		System.out.println(Arrays.toString(arr));
 	}
 
 	public static void main(String[] args) {
