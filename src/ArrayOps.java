@@ -133,7 +133,30 @@ public class ArrayOps {
 
 	public static void main(String[] args) {
 		
+		ArrayOps ob = new ArrayOps(10);
 		
+		ob.insert(1);
+		ob.insert(22);
+		ob.insert(3);
+		ob.insert(77);
+		ob.insert(55);
+		
+		ob.insertAtIndex(99, 5);
+		ob.insertAtIndex(99, 2);
+		
+		ob.delete();
+		
+		ob.deleteFromIndex(5);
+		ob.deleteFromIndex(0);
+		
+		ob.search(22);
+		ob.search(666);
+		
+		ob.sort();
+		
+		ob.print();
+		
+		ob.grow();
 
 	}
 
