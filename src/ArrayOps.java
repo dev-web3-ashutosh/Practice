@@ -31,6 +31,25 @@ public class ArrayOps {
 		size++;
 	}
 	
+	//insert at index
+	void insertAtIndex(int ele, int index) {
+		if(index > capacity-1) {
+			System.out.println("Invalid index");
+			return;
+		}
+		else {
+			//right shift operation
+			for(int i=size-1; i>=index; i--) {
+				arr[i+1] = arr[i];
+			}
+			
+			arr[index] = ele;
+			System.out.println("Element " + ele + " inserted at index " + index);
+			System.out.println("New Array: " + print()); //print method
+			size++;
+		}
+	}
+	
 	
 
 
