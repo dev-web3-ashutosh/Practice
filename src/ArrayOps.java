@@ -94,6 +94,7 @@ public class ArrayOps {
 		for(int i=0; i<size; i++) {
 			arr[i] = temp[i];
 		}
+		System.out.println("New Array: " + print()); //print method
 	}
 	
 	//search array method
@@ -109,6 +110,20 @@ public class ArrayOps {
 		if(flag == false) {
 			System.out.println("Element not found");
 		}
+	}
+	
+	//array sort method
+	void sort() {
+		for(int i=0; i<size-1; i++) {
+			for(int j=0; j<size-1-i; j++) {
+				if(arr[j] > arr[j+1]) {
+					int temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+		System.out.println("Sorted Array: " + print()); //print method
 	}
 	
 	
