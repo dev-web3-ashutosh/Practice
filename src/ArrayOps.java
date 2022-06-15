@@ -19,6 +19,18 @@ public class ArrayOps {
 		size = 0;
 	}
 	
+	//insert at end
+	void insert(int ele) {
+		if(size == capacity) {
+			grow(); //grow method
+		}
+		
+		arr[size] = ele;
+		System.out.println("Element " + ele + " inserted at index " + size);
+		System.out.println("New Array: " + print()); //print method
+		size++;
+	}
+	
 	
 
 
