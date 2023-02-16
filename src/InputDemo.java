@@ -33,12 +33,13 @@ public class InputDemo {
 		System.out.println("Enter double value");
 		num3=sc.nextDouble();
 		
-		System.out.println("Integer value is" + num1);
-		System.out.println("Float value is" + num2);
-		System.out.println("Character value is" + character);
-		System.out.println("Boolean value is" + bool);
-		System.out.println("String value is" + str);
-		System.out.println("Double value is" + num3);
+		System.out.println();
+		System.out.println("Integer value is " + num1);
+		System.out.println("Float value is " + num2);
+		System.out.println("Character value is " + character);
+		System.out.println("Boolean value is " + bool);
+		System.out.println("String value is " + str);
+		System.out.println("Double value is " + num3);
 		
 		sc.close();
 
