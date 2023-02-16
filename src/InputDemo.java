@@ -16,7 +16,7 @@ public class InputDemo {
 		num1=sc.nextInt();
 		
 		System.out.println("Enter float value");
-		num2=sc.nextInt();
+		num2=sc.nextFloat();
 		
 		System.out.println("Enter character value");
 		character=sc.next().charAt(0);
