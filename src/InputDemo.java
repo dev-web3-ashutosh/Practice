@@ -24,11 +24,8 @@ public class InputDemo {
 		System.out.println("Enter boolean value");
 		bool=sc.nextBoolean();
 		
-		//to eat next line
-		sc.nextLine();
-		
 		System.out.println("Enter string value");
-		str=sc.nextLine();
+		str=sc.next();
 		
 		System.out.println("Enter double value");
 		num3=sc.nextDouble();
