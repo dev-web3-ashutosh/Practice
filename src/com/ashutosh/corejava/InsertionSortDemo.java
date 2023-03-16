@@ -16,7 +16,7 @@ public class InsertionSortDemo {
 		}
 	}
 	
-	void print(int[] arr) {
+	void print1(int[] arr) {
 		int n=arr.length;
 		for(int i=0;i<n;++i) {
 			System.out.print(arr[i]+" ");
@@ -38,11 +38,11 @@ public class InsertionSortDemo {
 		}
 		InsertionSortDemo obj=new InsertionSortDemo();
 		System.out.println("Array before sorting");
-		obj.print(arr);
+		obj.print1(arr);
 		//sorting array
 		obj.insertionSort(arr);
 		System.out.println("Array after sorting");
-		obj.print(arr);
+		obj.print1(arr);
 		sc.close();
 
 	}
