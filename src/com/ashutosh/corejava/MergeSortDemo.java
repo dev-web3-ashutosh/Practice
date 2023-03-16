@@ -1,5 +1,7 @@
 package com.ashutosh.corejava;
 
+import java.util.Scanner;
+
 public class MergeSortDemo {
 	void merge(int[] arr, int l, int m, int r) {
 		int n1=m-l+1;
@@ -55,7 +57,27 @@ public class MergeSortDemo {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int  n;
+		int[] arr;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of the array");
+		n=sc.nextInt();
+		arr=new int[n];
+		System.out.println("Enter the elements of the array");
+		for(int i=0;i<n;++i) {
+			System.out.println("Enter element number "+(i+1));
+			arr[i]=sc.nextInt();
+		}
+		MergeSortDemo obj=new MergeSortDemo();
+		System.out.println("Array before sorting");
+		obj.print2(arr);
+		//sorting array
+		int l=0;
+		int r=n-1;
+		obj.mergeSort(arr,l,r);
+		System.out.println("Array after sorting");
+		obj.print2(arr);
+		sc.close();
 
 	}
 
