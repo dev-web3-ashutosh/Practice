@@ -43,7 +43,7 @@ public class InsertionSortDemo {
 		obj.insertionSort(arr);
 		System.out.println("Array after sorting");
 		obj.print(arr);
-		
+		sc.close();
 
 	}
 
