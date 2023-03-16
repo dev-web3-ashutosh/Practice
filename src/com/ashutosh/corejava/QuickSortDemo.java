@@ -17,9 +17,11 @@ public class QuickSortDemo {
 	}
 	
 	void quickSort(int[] arr, int l, int h) {
-		int p=partition(arr,l,h);
-		quickSort(arr,l,p-1);
-		quickSort(arr,p+1,h);
+		if(l<h) {
+			int p=partition(arr,l,h);
+			quickSort(arr,l,p-1);
+			quickSort(arr,p+1,h);
+		}
 	}
 	
 	void swap(int[] arr, int i, int j) {
