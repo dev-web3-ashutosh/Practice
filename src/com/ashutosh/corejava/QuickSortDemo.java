@@ -14,8 +14,13 @@ public class QuickSortDemo {
 		}
 	}
 	
+	void quickSort(int[] arr, int l, int h) {
+		int p=partition(arr,l,h);
+		quickSort(arr,l,p-1);
+		quickSort(arr,p+1,h);
+	}
 	
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
