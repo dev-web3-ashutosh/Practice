@@ -9,9 +9,9 @@ public class QuickSortDemo {
 				j++;
 				swap(arr,i,j);
 			}
-			swap(arr,j+1,h);
-			return (j+1);
 		}
+		swap(arr,j+1,h);
+		return (j+1);
 	}
 	
 	void quickSort(int[] arr, int l, int h) {
