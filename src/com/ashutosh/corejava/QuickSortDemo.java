@@ -1,5 +1,7 @@
 package com.ashutosh.corejava;
 
+import java.util.Scanner;
+
 public class QuickSortDemo {
 	int partition(int[] arr, int l, int h) {
 		int pivot=arr[h];
@@ -26,7 +28,7 @@ public class QuickSortDemo {
 		arr[j]=temp;
 	}
 	
-	void print2(int[] arr) {
+	void print3(int[] arr) {
 		int n=arr.length;
 		for(int i=0;i<n;++i) {
 			System.out.print(arr[i]+" ");
@@ -35,7 +37,28 @@ public class QuickSortDemo {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int  n;
+		int[] arr;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of the array");
+		n=sc.nextInt();
+		arr=new int[n];
+		System.out.println("Enter the elements of the array");
+		for(int i=0;i<n;++i) {
+			System.out.println("Enter element number "+(i+1));
+			arr[i]=sc.nextInt();
+		}
+		QuickSortDemo obj=new QuickSortDemo();
+		System.out.println("Array before sorting");
+		obj.print3(arr);
+		//sorting array
+		int l=0;
+		int h=n-1;
+		obj.quickSort(arr,l,h);
+		System.out.println("Array after sorting");
+		obj.print3(arr);
+		sc.close();
+
 
 	}
 
