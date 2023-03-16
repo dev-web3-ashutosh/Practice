@@ -1,5 +1,7 @@
 package com.ashutosh.corejava;
 
+import java.util.Scanner;
+
 public class InsertionSortDemo {
 	void insertionSort(int[] arr) {
 		int n=arr.length;
@@ -23,6 +25,24 @@ public class InsertionSortDemo {
 	}
 
 	public static void main(String[] args) {
+		int  n;
+		int[] arr;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of the array");
+		n=sc.nextInt();
+		arr=new int[n];
+		System.out.println("Enter the elements of the array");
+		for(int i=0;i<n;++i) {
+			System.out.println("Enter element number "+(i+1));
+			arr[i]=sc.nextInt();
+		}
+		InsertionSortDemo obj=new InsertionSortDemo();
+		System.out.println("Array before sorting");
+		obj.print(arr);
+		//sorting array
+		obj.insertionSort(arr);
+		System.out.println("Array after sorting");
+		obj.print(arr);
 		
 
 	}
