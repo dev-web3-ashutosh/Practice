@@ -3,16 +3,23 @@ package com.ashutosh.corejava;
 import java.util.Scanner;
 
 public class QuickSortDemo {
+	
 	int partition(int[] arr, int l, int h) {
 		int pivot=arr[h];
 		int j=l-1;
-		for(int i=0;i<h;++i) {
+		for(int i=0;i<h;i++) {
 			if(arr[i]<pivot) {
-				j++;
-				swap(arr,i,j);
+				j+=1;
+				//swap(arr,i,j);
+				int temp=arr[j];
+				arr[j]=arr[i];
+				arr[i]=temp;
 			}
 		}
-		swap(arr,j+1,h);
+		//swap(arr,(j+1),h);
+		int temp2=arr[j+1];
+		arr[j+1]=arr[h];
+		arr[h]=temp2;
 		return (j+1);
 	}
 	
@@ -32,7 +39,7 @@ public class QuickSortDemo {
 	
 	void print3(int[] arr) {
 		int n=arr.length;
-		for(int i=0;i<n;++i) {
+		for(int i=0;i<n;i++) {
 			System.out.print(arr[i]+" ");
 		}
 		System.out.println();
@@ -46,7 +53,7 @@ public class QuickSortDemo {
 		n=sc.nextInt();
 		arr=new int[n];
 		System.out.println("Enter the elements of the array");
-		for(int i=0;i<n;++i) {
+		for(int i=0;i<n;i++) {
 			System.out.println("Enter element number "+(i+1));
 			arr[i]=sc.nextInt();
 		}
@@ -55,13 +62,11 @@ public class QuickSortDemo {
 		obj.print3(arr);
 		//sorting array
 		int l=0;
-		int h=n-1;
+		int h=arr.length-1;
 		obj.quickSort(arr,l,h);
 		System.out.println("Array after sorting");
 		obj.print3(arr);
 		sc.close();
-
-
 	}
 
 }
