@@ -29,7 +29,18 @@ public class QuickSortDemo2 {
 	}
 
 	public static void main(String[] args) {
-		
+		QuickSortDemo2 obj=new QuickSortDemo2();
+		int[] arr= {22,34,66,8,99,0,66};
+		int n=arr.length;
+		int l=0;
+		int h=n-1;
+		System.out.println("Array before sorting:-");
+		obj.printArray(arr,n);
+		System.out.println();
+		obj.quickSort2(arr,l,h);
+		System.out.println();
+		System.out.println("Sorted array:-");
+		obj.printArray(arr,n);
 
 	}
 
