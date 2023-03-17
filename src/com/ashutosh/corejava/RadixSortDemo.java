@@ -38,6 +38,13 @@ public class RadixSortDemo {
 		}
 	}
 	
+	void radixSort(int[] arr, int n) {
+		int m=getMax(arr,n);
+		for(int e=1;m/e>0;e*=10) {
+			countSort(arr,n,e);
+		}
+	}
+	
 	
 
 	public static void main(String[] args) {
