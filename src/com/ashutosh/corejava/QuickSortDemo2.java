@@ -20,7 +20,13 @@ public class QuickSortDemo2 {
 		return (j+1);
 	}
 	
-	
+	void quickSort2(int[] arr, int l, int h) {
+		if(l<h) {
+			int p=partition(arr,l,h);
+			quickSort2(arr,l,p-1);
+			quickSort2(arr,p+1,h);
+		}
+	}
 
 	public static void main(String[] args) {
 		
