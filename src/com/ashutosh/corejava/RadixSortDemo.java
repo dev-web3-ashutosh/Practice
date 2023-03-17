@@ -17,7 +17,7 @@ public class RadixSortDemo {
 	void countSort(int[] arr, int n, int e) {
 		int[] output=new int[n];
 		int[] count=new int[10];
-		Arrays.fill(arr, e);
+		Arrays.fill(count, 0);
 		int i;
 		
 		for(i=0;i<n;i++) {
@@ -29,7 +29,7 @@ public class RadixSortDemo {
 		}
 		
 		for(i=n-1;i>=0;i--) {
-			output[count[(arr[i]/e)%10]-1]=arr[1];
+			output[count[(arr[i]/e)%10]-1]=arr[i];
 			count[(arr[i]/e)%10]--;
 		}
 		
@@ -40,7 +40,7 @@ public class RadixSortDemo {
 	
 	void radixSort(int[] arr, int n) {
 		int m=getMax(arr,n);
-		for(int e=1;m/e>0;e*=10) {
+		for(int e=1;(m/e)>0;e*=10) {
 			countSort(arr,n,e);
 		}
 	}
@@ -53,7 +53,16 @@ public class RadixSortDemo {
 	}
 
 	public static void main(String[] args) {
-		
+		RadixSortDemo obj=new RadixSortDemo();
+		int[] arr= {22,34,66,8,99,0,66};
+		int n=arr.length;
+		System.out.println("Array before sorting:-");
+		obj.printArray(arr,n);
+		System.out.println();
+		obj.radixSort(arr,n);
+		System.out.println();
+		System.out.println("Sorted array:-");
+		obj.printArray(arr,n);
 
 	}
 
