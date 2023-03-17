@@ -54,7 +54,7 @@ public class RadixSortDemo {
 
 	public static void main(String[] args) {
 		RadixSortDemo obj=new RadixSortDemo();
-		int[] arr= {22,34,66,8,99,0,66};
+		int[] arr= {22,34,0,66,8,99,22,0,66,9876};
 		int n=arr.length;
 		System.out.println("Array before sorting:-");
 		obj.printArray(arr,n);
