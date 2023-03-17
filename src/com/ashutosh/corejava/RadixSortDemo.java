@@ -33,7 +33,9 @@ public class RadixSortDemo {
 			count[(arr[i]/e)%10]--;
 		}
 		
-		
+		for(i=0;i<n;i++) {
+			arr[i]=output[i];
+		}
 	}
 
 	public static void main(String[] args) {
