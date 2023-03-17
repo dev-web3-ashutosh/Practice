@@ -1,7 +1,7 @@
 package com.ashutosh.corejava;
 
 public class MergeSortDemo2 {
-	void merge(int[] arr, int l, int m, int r) {
+	void merge2(int[] arr, int l, int m, int r) {
 		int n1=m-l+1;
 		int n2=r-m;
 		int[] L=new int[n1];
@@ -36,12 +36,12 @@ public class MergeSortDemo2 {
 		}
 	}
 	
-	void mergeSort(int[] arr, int l, int r) {
+	void mergeSort2(int[] arr, int l, int r) {
 		if(l<r) {
 			int m=(l+r)/2;
-			mergeSort(arr,l,m);
-			mergeSort(arr,m+1,r);
-			merge(arr,l,m,r);
+			mergeSort2(arr,l,m);
+			mergeSort2(arr,m+1,r);
+			merge2(arr,l,m,r);
 		}
 	}
 	
@@ -54,7 +54,17 @@ public class MergeSortDemo2 {
 
 	public static void main(String[] args) {
 		MergeSortDemo2 obj=new MergeSortDemo2();
-
+		int[] arr= {22,34,8,99,0};
+		int n=arr.length;
+		int l=0;
+		int r=n-1;
+		System.out.println("Array before sorting:-");
+		obj.printArray(arr,n);
+		System.out.println();
+		obj.mergeSort2(arr,l,r);
+		System.out.println();
+		System.out.println("Sorted array:-");
+		obj.printArray(arr,n);
 	}
 
 }
