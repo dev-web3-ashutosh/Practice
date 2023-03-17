@@ -10,7 +10,7 @@ public class InsertionSortDemo2 {
 				arr[j+1]=arr[j];
 				j--;
 			}
-			arr[j]=key;
+			arr[j+1]=key;
 			System.out.println("Array during sorting:-");
 			printArray(arr);
 		}
@@ -28,6 +28,7 @@ public class InsertionSortDemo2 {
 		InsertionSortDemo2 obj=new InsertionSortDemo2();
 		System.out.println("Array before sorting:-");
 		obj.printArray(arr);
+		System.out.println();
 		obj.insertionSort2(arr);
 		System.out.println();
 		System.out.println("Sorted array:-");
