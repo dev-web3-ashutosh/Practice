@@ -28,6 +28,11 @@ public class RadixSortDemo {
 			count[i]+=count[i-1];
 		}
 		
+		for(i=n-1;i>=0;i--) {
+			output[count[(arr[i]/e)%10]-1]=arr[1];
+			count[(arr[i]/e)%10]--;
+		}
+		
 		
 	}
 
