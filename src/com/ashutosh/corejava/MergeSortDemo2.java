@@ -9,8 +9,8 @@ public class MergeSortDemo2 {
 		for(int i=0;i<n1;i++) {
 			L[i]=arr[l+i];
 		}
-		for(int i=0;i<n2;i++) {
-			R[i]=arr[m+1+i];
+		for(int j=0;j<n2;j++) {
+			R[j]=arr[m+1+j];
 		}
 		int i=0,j=0;
 		int k=l;
@@ -21,6 +21,7 @@ public class MergeSortDemo2 {
 			}
 			else {
 				arr[k]=R[j];
+				j++;
 			}
 			k++;
 		}
@@ -54,7 +55,7 @@ public class MergeSortDemo2 {
 
 	public static void main(String[] args) {
 		MergeSortDemo2 obj=new MergeSortDemo2();
-		int[] arr= {22,34,8,99,0};
+		int[] arr= {22,34,66,8,99,0,66};
 		int n=arr.length;
 		int l=0;
 		int r=n-1;
