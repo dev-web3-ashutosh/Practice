@@ -1,14 +1,10 @@
 package com.ashutosh.corejava;
 
-import java.util.Random;
-import java.util.Scanner;
 import java.util.Stack;
 
 public class StackDemo {
-	Random rand=new Random();
-	static Stack<Integer> stack=new Stack<Integer>();
 	
-	void stackPush(int e) {
+	void stackPush(Stack<Integer> stack, int e) {
 		stack.push(e);
 		System.out.println("Stack after adding element "+e+" (Bottom to Top)");
 		printStack(stack);
@@ -31,9 +27,10 @@ public class StackDemo {
 
 	public static void main(String[] args) {
 		StackDemo obj=new StackDemo();
-		obj.stackPush(33);
-		obj.stackPush(21);
-		obj.stackPush(167);
+		Stack<Integer> stack=new Stack<Integer>();
+		obj.stackPush(stack,33);
+		obj.stackPush(stack,21);
+		obj.stackPush(stack,167);
 	}
 
 }
