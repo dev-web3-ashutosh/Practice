@@ -11,7 +11,7 @@ public class StackDemo {
 	static int curr_pointer=-1;
 	StackDemo(int size) {
 		StackDemo.size=size;
-		for(int i=0;i<size-1;i++) {
+		for(int i=0;i<size;i++) {
 			stack.push(rand.nextInt(100));
 			curr_pointer++;
 		}
