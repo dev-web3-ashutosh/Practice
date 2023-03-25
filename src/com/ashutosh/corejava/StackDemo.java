@@ -1,6 +1,7 @@
 package com.ashutosh.corejava;
 
 import java.util.Random;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class StackDemo {
@@ -34,7 +35,10 @@ public class StackDemo {
 	}
 
 	public static void main(String[] args) {
-		
+		System.out.println("Enter size of the stack");
+		Scanner sc=new Scanner(System.in);
+		int size=sc.nextInt();
+		StackDemo obj=new StackDemo(size);
 
 	}
 
