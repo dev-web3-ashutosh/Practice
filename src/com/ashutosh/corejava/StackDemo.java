@@ -39,7 +39,7 @@ public class StackDemo {
 		Scanner sc=new Scanner(System.in);
 		int size=sc.nextInt();
 		StackDemo obj=new StackDemo(size);
-
+		sc.close();
 	}
 
 }
