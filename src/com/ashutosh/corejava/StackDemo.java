@@ -10,6 +10,17 @@ public class StackDemo {
 		printStack(stack);
 	}
 	
+	void stackPop(Stack<Integer> stack) {
+		if(stack.empty()==true) {
+			System.out.println("Stack already empty");
+		}
+		else {
+			int y=stack.pop();
+			System.out.println("Stack after deleting element "+y+" (Bottom to Top)");
+			printStack(stack);
+		}
+	}
+	
 	void printStack(Stack<Integer> stack) {
 		Stack<Integer> temp=new Stack<Integer>();
 		while(stack.empty()==false) {
