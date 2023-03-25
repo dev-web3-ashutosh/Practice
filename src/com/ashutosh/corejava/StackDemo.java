@@ -42,6 +42,7 @@ public class StackDemo {
 		obj.stackPush(stack,33);
 		obj.stackPush(stack,21);
 		obj.stackPush(stack,167);
+		obj.stackPop(stack);
 	}
 
 }
