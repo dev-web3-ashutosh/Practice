@@ -12,7 +12,7 @@ public class StackDemo {
 	
 	void stackPop(Stack<Integer> stack) {
 		if(stack.empty()==true) {
-			System.out.println("Stack already empty");
+			System.out.println("POP operation cannot be performed! Stack already empty. \n");
 		}
 		else {
 			int y=stack.pop();
@@ -22,6 +22,9 @@ public class StackDemo {
 	}
 	
 	void printStack(Stack<Integer> stack) {
+		if(stack.empty()==true) {
+			System.out.println("Stack has no elements");
+		}
 		Stack<Integer> temp=new Stack<Integer>();
 		while(stack.empty()==false) {
 			temp.push(stack.peek());
@@ -43,6 +46,12 @@ public class StackDemo {
 		obj.stackPush(stack,21);
 		obj.stackPush(stack,167);
 		obj.stackPop(stack);
+		obj.stackPop(stack);
+		obj.stackPop(stack);
+		obj.stackPop(stack);
+		obj.stackPush(stack,33);
+		obj.stackPush(stack,21);
+		obj.stackPush(stack,167);
 	}
 
 }
