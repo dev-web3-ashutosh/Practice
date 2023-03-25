@@ -7,9 +7,12 @@ import java.util.Stack;
 public class StackDemo {
 	Random rand=new Random();
 	static Stack<Integer> stack=new Stack<Integer>();
-	static int size=stack.size();
-	static int curr_pointer=-1;
 	
+	void stackPush(int e) {
+		stack.push(e);
+		System.out.println("Stack after adding element "+e+" (Bottom to Top)");
+		printStack(stack);
+	}
 	
 	void printStack(Stack<Integer> stack) {
 		Stack<Integer> temp=new Stack<Integer>();
@@ -28,7 +31,9 @@ public class StackDemo {
 
 	public static void main(String[] args) {
 		StackDemo obj=new StackDemo();
-		
+		obj.stackPush(33);
+		obj.stackPush(21);
+		obj.stackPush(167);
 	}
 
 }
