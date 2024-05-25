@@ -137,7 +137,63 @@ insert into rating values(14, 114, 1);
 insert into rating values(15, 115, 1);
 insert into rating values(16, 116, 0);
     
+/* Display the total number of customers based on gender who have placed individual orders of worth at least Rs.3000 */
+SELECT 
+    c.CUS_GENDER, COUNT(DISTINCT c.CUS_ID)
+FROM
+    customer AS c
+        JOIN
+    orders AS o ON c.CUS_ID = o.CUS_ID
+WHERE
+    ORD_AMOUNT >= 3000
+GROUP BY c.CUS_GENDER;
 
+/* Display all the orders along with product name ordered by a customer having Customer_Id=2 */
+SELECT 
+    o.ORD_ID, p.PRO_NAME
+FROM
+    orders AS o
+        JOIN
+    supplier_pricing AS sp ON o.PRICING_ID = sp.PRICING_ID
+        JOIN
+    product AS p ON sp.PRO_ID = p.PRO_ID
+WHERE
+    o.CUS_ID = 2;
+
+/* Display the Supplier details who can supply more than one product */
+SELECT 
+    s.*
+FROM
+    supplier AS s
+WHERE
+    s.SUPP_ID IN (SELECT 
+            SUPP_ID
+        FROM
+            supplier_pricing
+        GROUP BY SUPP_ID
+        HAVING COUNT(DISTINCT PRO_ID) > 1);
+
+USE ecom_dbms_p1;
+
+/* Find the least expensive product from each category and print the table with category id, name, product name and price of the product */
+SELECT 
+    c.CAT_ID, c.CAT_NAME, p.PRO_NAME, sp.SUPP_PRICE
+FROM
+    category AS c
+        JOIN
+    product AS p ON c.CAT_ID = p.CAT_ID
+        JOIN
+    supplier_pricing AS sp ON p.PRO_ID = sp.PRO_ID
+WHERE
+    sp.SUPP_PRICE = (SELECT 
+            MIN(SUPP_PRICE)
+        FROM
+            supplier_pricing
+                JOIN
+            product ON supplier_pricing.PRO_ID = product.PRO_ID
+        WHERE
+            CAT_ID = c.CAT_ID)
+ORDER BY c.CAT_ID;
 
 
 
