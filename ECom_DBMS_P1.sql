@@ -195,7 +195,21 @@ WHERE
             CAT_ID = c.CAT_ID)
 ORDER BY c.CAT_ID;
 
-
+/* Select Top 3 customers according to tatal order value */
+SELECT CUS_ID, TotalAmount
+FROM (
+	SELECT *, RANK() OVER (ORDER BY TotalAmount DESC) AS Ranks
+	FROM (
+		SELECT 
+			CUS_ID, SUM(ORD_AMOUNT) AS TotalAmount
+		FROM
+			orders
+		GROUP BY
+			CUS_ID
+	) sq
+) sq
+WHERE
+	Ranks <=3;
 
 
 
