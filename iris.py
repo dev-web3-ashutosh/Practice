@@ -3,5 +3,5 @@ names = ["sepal-length", "sepal-width", "petal-length", "petal-width", "species"
 data=pd.read_csv("https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv", names=names)
 data.info()
 print(data.head())
-print(data.shape)
+data.shape
 data.describe()
