@@ -6,6 +6,6 @@ data.info()
 print("Head")
 print(data.head())
 print("Shape")
-data.shape
+data.shape()
 print("Des")
-data.describe()
+print(data.describe())
