@@ -21,8 +21,13 @@ print(data.groupby("species").size())
 # Visualisations
 
 # 1. Box and Whisker
+'''
 data.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
 plt.show()
+'''
 
+# 2. Histogram
+data.hist()
+plt.show()
 
 
