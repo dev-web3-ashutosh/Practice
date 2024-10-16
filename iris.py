@@ -28,6 +28,21 @@ plt.show()
 
 # 2. Histogram
 data.hist()
+
+# scatterplot; interactions between attributes (multivariate)
+'''
+scatter_matrix(dataset)
+plt.show()
+'''
+
+
+
+
+
+
+
+
+
 plt.show()
 
 
