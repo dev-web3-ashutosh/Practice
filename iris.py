@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from matplotlib import pyplot as plt
+from numpy import array
 
 names = ["sepal-length", "sepal-width", "petal-length", "petal-width", "species"] 
 data=pd.read_csv("https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv", names=names)
@@ -34,6 +35,11 @@ data.hist()
 scatter_matrix(dataset)
 plt.show()
 '''
+
+# define input and output variables x and y
+array=array(dataset)
+x=array[:,:-1]
+y=array[:,-1]
 
 
 
