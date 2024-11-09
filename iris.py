@@ -41,7 +41,8 @@ array=array(dataset)
 x=array[:,:-1]
 y=array[:,-1]
 
-
+# split the data
+x_train, x_test, y_train, y_test=train_test_split(x,y,test_size=0.2, random_state=1)
 
 
 
