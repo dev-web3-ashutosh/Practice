@@ -56,7 +56,9 @@ models.append(('NB', GaussianNB()))
 models.append(('SVM', SVC(gamma='auto')))
 '''
 
-
+# evaluate models
+results=[]
+names=[]
 
 
 
