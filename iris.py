@@ -60,8 +60,32 @@ models.append(('SVM', SVC(gamma='auto')))
 results=[]
 names=[]
 
-
+# Inigialize models
+for name, model in models:
+    kfold=StratifiedKFold(n_splits=10, random_state=1, shuffle=True)
+    cv_results=cross_val_score(model, x_train, y_train, cv=kfold, scoring='accuracy')
+    results.append(cv_results)
+    names.append(name)
+    print('%s: %f (%f)' % (name, cv_results.mean(), cv_results.std()))
 
 plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
